@@ -1,0 +1,11 @@
+<H1>Edit Movie</H1>
+
+<%= form_with model: @movie, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :rating %>
+  <%= form.number_field :rating, min: 0, max: 10 %>
+  <%= form.label :release_date %>
+  <%= form.date_field :release_date %>
+  <%= form.submit %>
+<% end %>

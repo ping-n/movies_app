@@ -1,0 +1,9 @@
+<h1>Movies#show</h1>
+
+<p>Name: <%= @movie.name %> | Rating: <%= @movie.rating %></p>
+<p>Release Date: <%= @movie.release_date %></p>
+
+
+<%= link_to "Update Movie", movies_edit_path(@movie.id) %>
+<%= link_to "Delete Movie", movie_path(@movie.id), method: :delete, data: { confirm: "Delete Movie?"} %>
+<%= link_to "Back", :back %>
